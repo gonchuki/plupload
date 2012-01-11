@@ -386,7 +386,7 @@ package com.plupload {
 			url = this._uploadUrl;
 
 			// Add name and chunk/chunks to URL if we use direct streaming method
-			if (!this._multipart) {
+			if (!this._multipart && this._settings.append_args) {
 				if (url.indexOf('?') == -1)
 					url += '?';
 				else

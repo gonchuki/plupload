@@ -898,6 +898,7 @@
 
 		// Default settings
 		settings = plupload.extend({
+			append_args: true,
 			chunk_size : 0,
 			multipart : true,
 			multi_selection : true,

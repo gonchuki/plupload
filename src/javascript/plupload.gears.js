@@ -341,7 +341,7 @@
 					curChunkSize = Math.min(chunkSize, file.size - (chunk  * chunkSize));
 
 					if (!multipart) {
-						url = plupload.buildUrl(up.settings.url, reqArgs);
+						url = up.settings.append_args ? plupload.buildUrl(up.settings.url, reqArgs) : url;
 					}
 
 					req = google.gears.factory.create('beta.httprequest');

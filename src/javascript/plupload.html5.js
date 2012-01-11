@@ -674,7 +674,7 @@
 							}
 							
 							// if no multipart, or last resort, send as binary stream
-							url = plupload.buildUrl(up.settings.url, plupload.extend(args, up.settings.multipart_params));
+							url = up.settings.append_args ? plupload.buildUrl(up.settings.url, plupload.extend(args, up.settings.multipart_params)) : url;
 							
 							xhr.open("post", url, true);
 							
